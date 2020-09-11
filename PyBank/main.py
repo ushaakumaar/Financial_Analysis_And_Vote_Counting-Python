@@ -103,6 +103,6 @@ with open(output_file, "w") as analysisFile:
     analysisFile.writelines(analysisData)
 
     for line in analysisData:
-        
-        #print the line to console
-        print(line)
+
+        #remove the "\n" from end of every line
+        line = line.split("\n")[0]
