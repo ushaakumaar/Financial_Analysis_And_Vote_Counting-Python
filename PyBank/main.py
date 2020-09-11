@@ -48,6 +48,12 @@ highestProfit = 0
 # variable to store the month with the greatest increase in profits amount over the entire period
 highestProfitMonth = ""
 
+# variable to store the greatest decrease in losses amount over the entire period
+highestLoss = 0
+
+# variable to store the month with the greatest decrease in losses amount over the entire period
+highestLossMonth = ""
+
 # variable to store change in "profit/losses"
 change = 0
 
