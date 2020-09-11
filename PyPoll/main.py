@@ -40,9 +40,7 @@ with open(output_file, "w") as analysisFile:
     for line in analysisData:
 
         #remove the "\n" from end of every line
-        line = line[0:len(line)-2]
+        line = line.split("\n")[0]
 
         #print the line to console
         print(line)
-
-
