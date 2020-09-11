@@ -92,6 +92,3 @@ analysisData.append(f"Average  Change: ${avgChange}\n")
 analysisData.append(f"Greatest Increase in Profits: {highestProfitMonth} (${highestProfit})\n")
 analysisData.append(f"Greatest Decrease in Profits: {highestLossMonth} (${highestLoss})\n")
 analysisData.append("-------------------------\n")
-
-for data in analysisData:
-    print(data)
