@@ -74,7 +74,11 @@ for index in range(0,totalMonths):
         if change > highestProfit:
             highestProfit = change
             highestProfitMonth = months[index]
-        
+        # find the greatest decrease in losses amount/date over the entire period
+        elif change < highestLoss:
+            highestLoss = change
+            highestLossMonth = months[index]
+
         # assign the current value to previous for the next iteration
         prevRevenue = int(revenue[index])
 
@@ -83,3 +87,5 @@ print(netAmount)
 print(avgChange)
 print(highestProfit)
 print(highestProfitMonth)
+print(highestLoss)
+print(highestLossMonth)
