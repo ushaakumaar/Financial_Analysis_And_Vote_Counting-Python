@@ -82,10 +82,16 @@ for index in range(0,totalMonths):
         # assign the current value to previous for the next iteration
         prevRevenue = int(revenue[index])
 
-print(totalMonths)
-print(netAmount)
-print(avgChange)
-print(highestProfit)
-print(highestProfitMonth)
-print(highestLoss)
-print(highestLossMonth)
+# write the analysis results into a list
+analysisData = []
+analysisData.append("Financial Analysis\n")
+analysisData.append("-------------------------\n")
+analysisData.append(f"Total Months: {totalMonths}\n")
+analysisData.append(f"Total: ${netAmount}\n")
+analysisData.append(f"Average  Change: ${avgChange}\n")
+analysisData.append(f"Greatest Increase in Profits: {highestProfitMonth} (${highestProfit})\n")
+analysisData.append(f"Greatest Decrease in Profits: {highestLossMonth} (${highestLoss})\n")
+analysisData.append("-------------------------\n")
+
+for data in analysisData:
+    print(data)
