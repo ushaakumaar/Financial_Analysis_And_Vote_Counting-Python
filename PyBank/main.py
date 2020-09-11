@@ -92,3 +92,6 @@ analysisData.append(f"Average  Change: ${avgChange}\n")
 analysisData.append(f"Greatest Increase in Profits: {highestProfitMonth} (${highestProfit})\n")
 analysisData.append(f"Greatest Decrease in Profits: {highestLossMonth} (${highestLoss})\n")
 analysisData.append("-------------------------\n")
+
+# save the output file path
+output_file = os.path.join("..","Analysis","bank_analysis_report.txt")
