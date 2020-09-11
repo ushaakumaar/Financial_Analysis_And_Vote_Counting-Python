@@ -106,3 +106,6 @@ with open(output_file, "w") as analysisFile:
 
         #remove the "\n" from end of every line
         line = line.split("\n")[0]
+
+        #print the line to console
+        print(line)
