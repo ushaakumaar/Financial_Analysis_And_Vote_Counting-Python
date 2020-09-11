@@ -101,3 +101,8 @@ with open(output_file, "w") as analysisFile:
     
     # write the results into the analysis text file
     analysisFile.writelines(analysisData)
+
+    for line in analysisData:
+        
+        #print the line to console
+        print(line)
