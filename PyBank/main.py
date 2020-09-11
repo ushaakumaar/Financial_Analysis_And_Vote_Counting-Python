@@ -33,4 +33,18 @@ with open(budgetCSV, "r") as csvFile:
         # store revenue data in a list
         revenue.append(row[1])
 
+# variable to store the net total amount of "Profit/Losses" over the entire period
+netAmount = 0
+
+# calculate average of the changes in "Profit/Losses" over the entire period
+avgChange = round((int(revenue[totalMonths-1]) - int(revenue[0]))/(totalMonths-1),2)
+
+# loop through the list
+for index in range(0,totalMonths):
+
+    # calculate the net total amount of "Profit/Losses" over the entire period
+    netAmount += int(revenue[index])
+
 print(totalMonths)
+print(netAmount)
+print(avgChange)
