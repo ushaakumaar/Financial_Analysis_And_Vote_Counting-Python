@@ -39,12 +39,41 @@ netAmount = 0
 # calculate average of the changes in "Profit/Losses" over the entire period
 avgChange = round((int(revenue[totalMonths-1]) - int(revenue[0]))/(totalMonths-1),2)
 
+# variable to save previous revenue
+prevRevenue = 0
+
+# variable to store the greatest increase in profits amount over the entire period
+highestProfit = 0
+
+# variable to store the month with the greatest increase in profits amount over the entire period
+highestProfitMonth = ""
+
+# variable to store change in "profit/losses"
+change = 0
+
 # loop through the list
 for index in range(0,totalMonths):
 
     # calculate the net total amount of "Profit/Losses" over the entire period
     netAmount += int(revenue[index])
 
+    if index == 0:
+        # initialize prevRevenue to the first profit/loss
+        prevRevenue = int(revenue[index])
+    else:
+        # compute the change in profit/losses
+        change = int(revenue[index]) - prevRevenue
+
+        # find the greatest increase in profits amount/date over the entire period
+        if change > highestProfit:
+            highestProfit = change
+            highestProfitMonth = months[index]
+        
+        # assign the current value to previous for the next iteration
+        prevRevenue = int(revenue[index])
+
 print(totalMonths)
 print(netAmount)
 print(avgChange)
+print(highestProfit)
+print(highestProfitMonth)
