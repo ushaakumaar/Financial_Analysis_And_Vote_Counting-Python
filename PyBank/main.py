@@ -95,3 +95,9 @@ analysisData.append("-------------------------\n")
 
 # save the output file path
 output_file = os.path.join("..","Analysis","bank_analysis_report.txt")
+
+# open the output file in "write" mode
+with open(output_file, "w") as analysisFile:
+    
+    # write the results into the analysis text file
+    analysisFile.writelines(analysisData)
